@@ -80,8 +80,11 @@ $color-violet: #9356dc;
   75%{ 
     opacity: 0.25;
   }
+    99.99% {
+        opacity:0;
+    }
   100% {
-    opacity: 0;
+    visibility: hidden;
   }
  
 }
