@@ -74,8 +74,11 @@ a {
   75% {
     opacity: 0.25;
   }
-  100% {
+  99.99% {
     opacity: 0;
+  }
+  100% {
+    visibility: hidden;
   }
 }
 .container {
@@ -190,9 +193,6 @@ header .location .place {
 .explorer .button:hover {
   opacity: 0.85;
   box-shadow: 0px 2px 20px 0px rgba(0, 0, 0, 0.15);
-}
-.explorer .buttonactive {
-  background-color: aqua;
 }
 
 /******fonctionnement******/
