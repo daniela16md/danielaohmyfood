@@ -180,16 +180,23 @@ main {
             flex-direction: column;
             justify-content: center;
             padding-left: 20px;
+            white-space: nowrap;
+            width: 80%;
         
             h3 {
                 margin: 0px;
                 font-size: 18px;
                 font-weight: 500;
+                overflow: hidden;
+                text-overflow: ellipsis;
+
             }
             p {
                 margin: 0px;
                 font-size: 15px;
                 font-weight: 300;
+                overflow: hidden;
+                text-overflow: ellipsis;
             }
         }
         .price {
@@ -203,32 +210,32 @@ main {
             justify-content: center;
             align-items: center;
             position: absolute;
-            width: 59px;
             height: 69px;
-            right: -59px;
             background-color: $color-lightgreen;
             border-top-right-radius: 15px;
             border-bottom-right-radius: 15px;
+            width: 0;
         }
         
         .fa-circle-check {
             color: $color-white;
             font-size: 30px;
-            &:hover {
-                animation: spin 2s;
-            }
         }
+
         &:hover .animation-check {
             animation: slideIn 200ms ease-in-out forwards;
             background-color: $color-lightgreen;
+            width: 10%;
         }
         &:hover .price {
             animation: slideInPrix 200ms ease-in-out forwards;
         }
-        &:active .animation-check {
-            animation: slideIn 200ms ease-in-out forwards;
+        &:hover .fa-circle-check {
+          animation: spin 2s;
+        
         }
     }
+        
 }
 @keyframes spin{
     from {
@@ -241,7 +248,7 @@ main {
 
 @keyframes slideIn {
 from {
-    right: -59px;
+    right: -10%;
 }
 
 to {
@@ -255,7 +262,7 @@ from {
 }
 
 to {
-    right: 59px;
+    right: 10%;
 }
 }
 main .section1 {
@@ -427,4 +434,4 @@ footer {
           margin-right: 40px;
         }
     }
-} 
+}           

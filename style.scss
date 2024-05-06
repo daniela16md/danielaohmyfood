@@ -68,11 +68,20 @@ $color-violet: #9356dc;
     }
 }
 @keyframes loadscreen {
- from {
+ 0% {
    opacity: 1;
   }
-  to {
-    visibility: hidden;
+  20%{
+    opacity: 0.50
+  }
+  50%{
+    opacity: 0.4;
+  }
+  75%{ 
+    opacity: 0.25;
+  }
+  100% {
+    opacity: 0;
   }
  
 }
@@ -81,20 +90,23 @@ $color-violet: #9356dc;
 .container{
     position: fixed;
     background: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     top: 0;
     height: 100%;
     width: 100%;
     z-index: 100;
-    animation: loadscreen 1s 3s forwards;
+    animation: loadscreen 1s 4s forwards;
+    backdrop-filter: blur(5px);
 
     .ring{
         position: absolute;
         border-radius: 50%;
-        width: 200px;
-        height: 200px;
+        width: 170px;
+        height: 170px;
         border: 0px solid black;
-        top: 45%;
-        left: 40%;
+        
         &.ring:nth-child(1){
             border-bottom-width: 8px;
             border-color: $color-blue;
@@ -115,12 +127,11 @@ $color-violet: #9356dc;
     }
     
     p {
-    position: fixed;
-    top: 55%;
-    left: 50%;
+    position: absolute;
     font-weight: 700;
     font-size: 18px;
-    color: $color-main;
+    color: $color-violet;
+    font-family: "shrikhand", sans-serif;
     }
 }
 
@@ -491,10 +502,6 @@ footer {
 
 /*****DESKTOP*****/
 @media (min-width: 1024px) {
-    /*****Loader****/
-    .container .ring {
-      left: 47%;
-    }
     /***************Explorer***************/
     .explorer h2 {
       font-size: 40px;

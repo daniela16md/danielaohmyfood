@@ -163,16 +163,22 @@ main .card .card-text {
   flex-direction: column;
   justify-content: center;
   padding-left: 20px;
+  white-space: nowrap;
+  width: 80%;
 }
 main .card .card-text h3 {
   margin: 0px;
   font-size: 18px;
   font-weight: 500;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 main .card .card-text p {
   margin: 0px;
   font-size: 15px;
   font-weight: 300;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 main .card .price {
   position: absolute;
@@ -185,29 +191,26 @@ main .card .animation-check {
   justify-content: center;
   align-items: center;
   position: absolute;
-  width: 59px;
   height: 69px;
-  right: -59px;
   background-color: #99e2d0;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
+  width: 0;
 }
 main .card .fa-circle-check {
   color: white;
   font-size: 30px;
 }
-main .card .fa-circle-check:hover {
-  animation: spin 2s;
-}
 main .card:hover .animation-check {
   animation: slideIn 200ms ease-in-out forwards;
   background-color: #99e2d0;
+  width: 10%;
 }
 main .card:hover .price {
   animation: slideInPrix 200ms ease-in-out forwards;
 }
-main .card:active .animation-check {
-  animation: slideIn 200ms ease-in-out forwards;
+main .card:hover .fa-circle-check {
+  animation: spin 2s;
 }
 
 @keyframes spin {
@@ -220,7 +223,7 @@ main .card:active .animation-check {
 }
 @keyframes slideIn {
   from {
-    right: -59px;
+    right: -10%;
   }
   to {
     right: 0px;
@@ -231,7 +234,7 @@ main .card:active .animation-check {
     right: 0;
   }
   to {
-    right: 59px;
+    right: 10%;
   }
 }
 main .section1 {
