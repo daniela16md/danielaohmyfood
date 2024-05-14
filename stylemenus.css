@@ -45,17 +45,20 @@ a {
 /*****variables*****/
 /*****************header*******************/
 .header {
-  position: relative;
   width: 100%;
   display: flex;
   flex-direction: row;
   align-items: center;
+  justify-content: center;
   height: 63px;
   max-width: 1920px;
 }
-.header h1 {
-  width: 100%;
+.header img {
+  position: relative;
+  margin: 0;
   text-align: center;
+  width: 197px;
+  height: 36px;
 }
 .header i {
   position: absolute;
@@ -67,25 +70,26 @@ a {
   left: 25px;
 }
 
-header img {
-  object-fit: cover;
-  width: 100%;
-  height: 280px;
-}
-
 /******************** menus ******************** */
 main {
-  background-color: #f6f6f6;
   width: 100%;
   display: flex;
   flex-direction: column;
   margin: auto;
-  border-top-left-radius: 40px;
-  border-top-right-radius: 40px;
+}
+main .menu_image {
+  object-fit: cover;
+  width: 100%;
+  max-height: 275px;
+}
+main .menuheading {
   margin-top: -50px;
   padding: 20px;
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
+  background-color: #f6f6f6;
 }
-main .title {
+main .menuheading .title {
   width: 100%;
   margin: auto;
   margin-top: 20px;
@@ -96,50 +100,49 @@ main .title {
   justify-content: center;
   gap: 20px;
 }
-main .title .menu-hearts {
+main .menuheading .title .menu-hearts {
   display: flex;
   justify-content: flex-end;
 }
-main .title .empty-heart > div {
+main .menuheading .title .empty-heart > div {
   margin-right: 50px;
   font-size: 30px;
 }
-main .title .empty-heart {
+main .menuheading .title .empty-heart {
   position: absolute;
   font-size: 30px;
 }
-main .title .full-hearts {
+main .menuheading .title .full-hearts {
   position: absolute;
   opacity: 0;
-  transition-property: all;
-  transition-duration: 2s;
-  font-size: 30px;
-}
-main .title .full-hearts:hover {
-  opacity: 1;
+  transition: all 2s;
   color: transparent;
-  background-image: linear-gradient(#ff79da, #9356dc);
+  background-image: linear-gradient(#9356dc, #FF79da);
   background-clip: text;
+  -webkit-background-clip: text;
 }
-main .title h1 {
+main .menuheading .title .full-hearts:hover {
+  opacity: 1;
+}
+main .menuheading .title h1 {
   font-weight: 400;
   font-size: 28px;
   text-align: center;
 }
-main .title i {
+main .menuheading .title i {
   font-size: 30px;
   color: black;
 }
-main h2 {
+main .menuheading h2 {
   margin-top: 40px;
   margin-bottom: 15px;
   font-size: 16px;
   font-weight: 300;
 }
-main .spanh2 {
+main .menuheading .spanh2 {
   border-bottom: 3px solid #99e2d0;
 }
-main .card {
+main .menuheading .card {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -154,11 +157,11 @@ main .card {
   margin-bottom: 20px;
   gap: 5px;
 }
-main .card .p {
+main .menuheading .card .p {
   font-weight: 500;
   font-size: 16px;
 }
-main .card .card-text {
+main .menuheading .card .card-text {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -166,27 +169,27 @@ main .card .card-text {
   white-space: nowrap;
   width: 80%;
 }
-main .card .card-text h3 {
+main .menuheading .card .card-text h3 {
   margin: 0px;
   font-size: 18px;
   font-weight: 500;
   overflow: hidden;
   text-overflow: ellipsis;
 }
-main .card .card-text p {
+main .menuheading .card .card-text p {
   margin: 0px;
   font-size: 15px;
   font-weight: 300;
   overflow: hidden;
   text-overflow: ellipsis;
 }
-main .card .price {
+main .menuheading .card .price {
   position: absolute;
   right: 10px;
   font-weight: 700;
   font-size: 15px;
 }
-main .card .animation-check {
+main .menuheading .card .animation-check {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -197,25 +200,25 @@ main .card .animation-check {
   border-bottom-right-radius: 15px;
   width: 0;
 }
-main .card .fa-circle-check {
+main .menuheading .card .fa-circle-check {
   color: white;
-  font-size: 30px;
+  font-size: 20px;
 }
-main .card:hover .animation-check {
+main .menuheading .card:hover .animation-check {
   animation: slideIn 200ms ease-in-out forwards;
   background-color: #99e2d0;
   width: 10%;
 }
-main .card:hover .price {
+main .menuheading .card:hover .price {
   animation: slideInPrix 200ms ease-in-out forwards;
 }
-main .card:hover .fa-circle-check {
-  animation: spin 2s;
+main .menuheading .card:hover .fa-circle-check {
+  animation: spin 1s;
 }
 
 @keyframes spin {
   from {
-    transform: rotate(360deg);
+    transform: rotate(100deg);
   }
   to {
     transform: rotate(80deg);
@@ -255,8 +258,8 @@ main .section3 {
 @keyframes sideSlide {
   0% {
     opacity: 0;
-    margin-left: -500px;
-    margin-right: -500px;
+    margin-left: -200px;
+    margin-right: -200px;
   }
   50% {
     opacity: 0.5;
@@ -336,31 +339,34 @@ footer p {
 }
 .button:hover {
   opacity: 0.85;
-  box-shadow: 0px 2px 20px 0px rgba(0, 0, 0, 0.25);
+  box-shadow: 2px 4px 10px 4px rgba(0, 0, 0, 0.25);
 }
 
 /********************** Desktop ***************** */
 @media (min-width: 1024px) {
-  /***************header************** */
-  header img {
-    height: 400px;
-    object-fit: cover;
-  }
   /***************body************** */
   main {
+    width: 100%;
+    display: flex;
+    align-items: center;
+  }
+  main .menu_image {
+    max-height: 383px;
+  }
+  main .menuheading {
     width: 75%;
   }
-  main .title {
+  main .menuheading .title {
     justify-content: center;
     gap: 20px;
   }
-  .section1,
-  .section2,
-  .section3 {
+  main .menuheading .section1,
+  main .menuheading .section2,
+  main .menuheading .section3 {
     padding-left: 140px;
     padding-right: 140px;
   }
-  .button {
+  main .menuheading .button {
     max-width: 22%;
     margin-top: 0;
     margin-bottom: 30px;

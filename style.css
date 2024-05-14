@@ -132,6 +132,12 @@ header {
   align-items: center;
   max-width: 1920px;
 }
+header img {
+  width: 197px;
+  height: 36px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
 header .location {
   display: flex;
   justify-content: center;
@@ -139,9 +145,10 @@ header .location {
   height: 50px;
   width: 100%;
   background-color: #eaeaea;
-  box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
   gap: 15px;
   padding-left: 30px;
+  position: relative;
 }
 header .location .place {
   border: 0px;
@@ -178,11 +185,11 @@ header .location .place {
   width: 60%;
   height: 50px;
   font-weight: 500;
-  background: linear-gradient(to bottom, #FF79DA, #9356DC);
+  background: linear-gradient(#FF79DA, #9356DC);
   font-size: 16px;
   border-radius: 30px;
   border: solid 0px;
-  box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.25);
   margin-bottom: 50px;
   transition: all 400ms;
   color: white;
@@ -192,7 +199,7 @@ header .location .place {
 }
 .explorer .button:hover {
   opacity: 0.85;
-  box-shadow: 0px 2px 20px 0px rgba(0, 0, 0, 0.25);
+  box-shadow: 2px 4px 10px 4px rgba(0, 0, 0, 0.25);
 }
 
 /******fonctionnement******/
@@ -227,6 +234,7 @@ header .location .place {
   align-self: center;
   width: 100%;
   z-index: 0;
+  cursor: progress;
 }
 .fonctionnement .cards .card-text {
   box-sizing: content-box;
@@ -301,6 +309,10 @@ header .location .place {
   width: 90%;
   align-items: center;
   flex-direction: column;
+  border-radius: 10px;
+}
+.restaurants .cards .card:hover {
+  box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.25);
 }
 .restaurants .cards .card a {
   width: 100%;
@@ -371,28 +383,29 @@ header .location .place {
 }
 .restaurants .cards .card-content .menu-hearts {
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
+  align-items: center;
+  padding-right: 15px;
 }
-.restaurants .cards .card-content .menu-hearts .empty-hearts > div {
-  margin-right: 50px;
-}
-.restaurants .cards .card-content .menu-hearts .fa-heart {
-  position: relative;
-  line-height: 3;
+.restaurants .cards .card-content .fa-heart {
+  position: absolute;
   color: black;
   font-size: 30px;
 }
-.restaurants .cards .card-content .menu-hearts .full-hearts {
+.restaurants .cards .card-content .empty-heart:hover {
+  display: none;
+}
+.restaurants .cards .card-content .full-hearts {
   position: absolute;
   opacity: 0;
-  transition-property: all;
-  transition-duration: 2s;
-}
-.restaurants .cards .card-content .menu-hearts .full-hearts:hover {
-  opacity: 1;
+  transition: all 2s;
   color: transparent;
-  background-image: linear-gradient(#FF79DA, #9356DC);
+  background-image: linear-gradient(#9356dc, #FF79da);
   background-clip: text;
+  -webkit-background-clip: text;
+}
+.restaurants .cards .card-content .full-hearts:hover {
+  opacity: 1;
 }
 
 /*******Footer******/
@@ -439,6 +452,10 @@ footer p {
 
 /*****DESKTOP*****/
 @media (min-width: 1024px) {
+  header .img {
+    width: 200px;
+    height: 34.2px;
+  }
   /***************Explorer***************/
   .explorer h2 {
     font-size: 40px;
