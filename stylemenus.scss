@@ -61,11 +61,12 @@ $color-lightgrey: #f6f6f6;
     justify-content: center;
     height: 63px;
     max-width: 1920px;
+    margin-top: 10px;
     img {
         position: relative;
         margin: 0;
         text-align: center;
-        width: 197px;
+        width: 50%;
         height: 36px;
     }
 
@@ -381,6 +382,11 @@ footer {
 /********************** Desktop ***************** */
 @media (min-width: 1024px) {
 
+    /****header*****/
+    
+    .header{
+        margin-bottom: 10px;
+    }
     /***************body************** */
     main {
       width: 100%;

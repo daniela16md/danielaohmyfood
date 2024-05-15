@@ -149,11 +149,10 @@ header {
     align-items: center;
     max-width: 1920px;
     img {
-        width: 197px;
+        width: 50%;
         height: 36px;
-        padding-top: 10px;
-        padding-bottom: 10px;
-       
+        margin-top: 20px;
+        margin-bottom: 10px;
     }
     .location {
         display: flex;
@@ -229,18 +228,17 @@ header {
  
 /******fonctionnement******/
 .fonctionnement {
-    padding-bottom: 50px;
     display: flex;
     flex-direction: column;
     text-align: left;
     gap: 20px;
     padding: 20px;
     width: 98%;
+    margin-bottom: 40px;
     
     h2 {
-    margin-top: 40px;
-    margin-bottom: 0px;
     margin-left: 10px;
+    margin-bottom: 10px;
     }
     
     .cards {
@@ -259,7 +257,7 @@ header {
         align-self: center;
         width: 100%;
         z-index: 0;
-        cursor:progress;
+        cursor: pointer;
         }
         .card-text {
         box-sizing: content-box;
@@ -316,18 +314,18 @@ header {
     padding-bottom: 70px;
 
     h2 {
-    margin-top: 50px;
-    padding-bottom: 20px;
-    margin-left: 5%;
+    padding-left: 5%;
+    padding-top: 40px;
+    margin: 0;
     }
     
     .cards {
     width: 100%;
-    margin-top: -40px;
     justify-content: center;
     align-items: center;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
     gap: 20px; 
 
         .card {
@@ -338,9 +336,7 @@ header {
         align-items: center;
         flex-direction: column;
         border-radius: 10px;
-        &:hover {
-            box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.25);
-        }    
+            
             a {
             width: 100%;
             
@@ -366,7 +362,6 @@ header {
                         border: none;
                         border-radius: 3px;
                         box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.15);
-                        
                         
                         p {
                             color: #008766;
@@ -486,7 +481,6 @@ footer {
             align-items: center;
             gap: 15px;
             
-            
             i {
                 width: 13px;
             }
@@ -508,9 +502,15 @@ footer {
 
 /*****DESKTOP*****/
 @media (min-width: 1024px) {
-    header .img{
-        width: 200px;
-        height: 34.2px;
+    header {
+        img{
+            width: 200px;
+            height: 34.2px;
+            margin-bottom: 20px;
+        }
+        .location{
+            box-shadow: none;
+        }
     }
     /***************Explorer***************/
     .explorer h2 {
@@ -519,49 +519,46 @@ footer {
     }
     .explorer .button {
       max-width: 22%;
-    }
-    main button {
-      max-width: 220px;
-      margin-top: 0;
       margin-bottom: 30px;
     }
+   
     /******************fonctionnement*************/
     .fonctionnement {
-      width: 85%;
+      width: 90%;
       margin: auto;
       margin-top: 10px;
-      margin-bottom: 50px;
+      margin-bottom: 30px;
       padding: 20px;
     
       .cards {
         flex-direction: row;
         gap: 0px;
-        padding-right:20px;
+        padding-right: 20px;
       }
     }
     /******************** restaurants ****************/
-    .restaurants h2 {
-      width: 85%;
-      margin: auto;
-      margin-top: 40px;
-      margin-bottom: 50px;
-      padding-left: 25px;
-    }
-    .restaurants .cards {
-      width: 85%;
-      margin: auto;
-      flex-direction: row;
-      flex-wrap: wrap;
-      gap: 80px;
-    
-      .card {
-        width: 45%;
-        margin-top: -60px;
-      
-        .image .img {
-          object-position: 50% 80%;
+    .restaurants{
+        gap: 30px;
+            h2 {
+            width: 85%;
+            margin: auto;
+            padding-left: 0;
+            padding-top: 30px;
+            }
+            .cards {
+            width: 87%;
+            margin: auto;
+            gap: 50px 80px;
+            margin-top: 0;
+            
+            .card {
+                width: 45%;
+
+                .image .img {
+                object-position: 50% 80%;
+                }
+            }
         }
-      }
     }
     footer {
       flex-direction: row-reverse;

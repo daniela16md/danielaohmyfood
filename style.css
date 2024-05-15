@@ -133,10 +133,10 @@ header {
   max-width: 1920px;
 }
 header img {
-  width: 197px;
+  width: 50%;
   height: 36px;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  margin-top: 20px;
+  margin-bottom: 10px;
 }
 header .location {
   display: flex;
@@ -204,18 +204,17 @@ header .location .place {
 
 /******fonctionnement******/
 .fonctionnement {
-  padding-bottom: 50px;
   display: flex;
   flex-direction: column;
   text-align: left;
   gap: 20px;
   padding: 20px;
   width: 98%;
+  margin-bottom: 40px;
 }
 .fonctionnement h2 {
-  margin-top: 40px;
-  margin-bottom: 0px;
   margin-left: 10px;
+  margin-bottom: 10px;
 }
 .fonctionnement .cards {
   display: flex;
@@ -234,7 +233,7 @@ header .location .place {
   align-self: center;
   width: 100%;
   z-index: 0;
-  cursor: progress;
+  cursor: pointer;
 }
 .fonctionnement .cards .card-text {
   box-sizing: content-box;
@@ -289,17 +288,17 @@ header .location .place {
   padding-bottom: 70px;
 }
 .restaurants h2 {
-  margin-top: 50px;
-  padding-bottom: 20px;
-  margin-left: 5%;
+  padding-left: 5%;
+  padding-top: 40px;
+  margin: 0;
 }
 .restaurants .cards {
   width: 100%;
-  margin-top: -40px;
   justify-content: center;
   align-items: center;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  flex-wrap: wrap;
   gap: 20px;
 }
 .restaurants .cards .card {
@@ -310,9 +309,6 @@ header .location .place {
   align-items: center;
   flex-direction: column;
   border-radius: 10px;
-}
-.restaurants .cards .card:hover {
-  box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.25);
 }
 .restaurants .cards .card a {
   width: 100%;
@@ -452,9 +448,13 @@ footer p {
 
 /*****DESKTOP*****/
 @media (min-width: 1024px) {
-  header .img {
+  header img {
     width: 200px;
     height: 34.2px;
+    margin-bottom: 20px;
+  }
+  header .location {
+    box-shadow: none;
   }
   /***************Explorer***************/
   .explorer h2 {
@@ -463,18 +463,14 @@ footer p {
   }
   .explorer .button {
     max-width: 22%;
-  }
-  main button {
-    max-width: 220px;
-    margin-top: 0;
     margin-bottom: 30px;
   }
   /******************fonctionnement*************/
   .fonctionnement {
-    width: 85%;
+    width: 90%;
     margin: auto;
     margin-top: 10px;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
     padding: 20px;
   }
   .fonctionnement .cards {
@@ -483,23 +479,23 @@ footer p {
     padding-right: 20px;
   }
   /******************** restaurants ****************/
+  .restaurants {
+    gap: 30px;
+  }
   .restaurants h2 {
     width: 85%;
     margin: auto;
-    margin-top: 40px;
-    margin-bottom: 50px;
-    padding-left: 25px;
+    padding-left: 0;
+    padding-top: 30px;
   }
   .restaurants .cards {
-    width: 85%;
+    width: 87%;
     margin: auto;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 80px;
+    gap: 50px 80px;
+    margin-top: 0;
   }
   .restaurants .cards .card {
     width: 45%;
-    margin-top: -60px;
   }
   .restaurants .cards .card .image .img {
     object-position: 50% 80%;
