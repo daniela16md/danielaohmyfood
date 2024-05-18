@@ -172,6 +172,7 @@ main {
                 padding-left: 20px;
                 white-space: nowrap;
                 width: 80%;
+                gap: 5px;
             
                 h3 {
                     margin: 0px;
@@ -348,7 +349,8 @@ footer {
     border-radius: 30px;
     border: solid 0px;
     box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.15);
-    margin-bottom: 50px;
+    margin-bottom: 20px;
+    margin-top: 40px;
     transition: all 400ms;
     color: $color-white;
     display: flex;
@@ -393,8 +395,6 @@ footer {
             }
             .button {
                 max-width: 22%;
-                margin-top: 0;
-                margin-bottom: 30px;
             }
         }
     }
