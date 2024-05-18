@@ -30,18 +30,6 @@ a {
   box-sizing: border-box;
 }
 
-.fade-in-image {
-  animation: fadeIn 1s;
-}
-
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
 /*****variables*****/
 /*****************header*******************/
 .header {
@@ -65,7 +53,7 @@ a {
   position: absolute;
   color: black;
   font-size: 20px;
-  top: 24px;
+  top: 30px;
   width: 30px;
   height: 30px;
   left: 25px;
@@ -129,6 +117,8 @@ main .menuheading .title h1 {
   font-weight: 400;
   font-size: 28px;
   text-align: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 main .menuheading .title i {
   font-size: 30px;
@@ -185,10 +175,12 @@ main .menuheading .card .card-text p {
   text-overflow: ellipsis;
 }
 main .menuheading .card .price {
-  position: absolute;
+  position: relative;
   right: 10px;
   font-weight: 700;
   font-size: 15px;
+  padding-right: 10px;
+  padding-top: 25px;
 }
 main .menuheading .card .animation-check {
   display: flex;
@@ -271,14 +263,6 @@ main .section3 {
     margin-right: 0;
   }
 }
-main .price {
-  position: relative;
-  font-size: 15px;
-  font-weight: 700;
-  padding-right: 20px;
-  padding-top: 25px;
-}
-
 /*******Footer******/
 footer {
   width: 100%;
